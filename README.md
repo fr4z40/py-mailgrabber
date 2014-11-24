@@ -8,5 +8,5 @@ and beautifulsoup4:
 
 ###########################################################################
 
-este script é apenas um exemplo do que pode ser feito com a lib google,
-é possível automatizar a utilização de "dorks" por exemplo
+this script is just an example of what can be done with google lib,
+you can automate the use of "dorks" for example
