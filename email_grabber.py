@@ -22,7 +22,7 @@ def chk(x):
     for blk in cntd:
       if (("@" in blk) and (".com" in blk)) and (("http" not in blk) and ("/" not in blk)):
         blk = (blk.strip("."))
-        if blk not in mails:
+        if (blk not in mails and "@xx" not in blk) and ("meudominio" not in blk and "seuemail" and "seublog" not in blk):
           if (len(blk[:(blk.find("@"))]) < 3):
             pass
           else:
