@@ -15,8 +15,8 @@ def writer(x,y):
 def chk(x):
   try:
     cntd = (str((urllib.request.urlopen(x)).read().decode('utf8')))
-    cntd = ((((((cntd.replace("\\r","\r")).replace(":"," ")).replace("\\t","\t")).replace("\\n","\n")).replace("="," ")).replace(")"," "))
-    cntd = ((((cntd.replace("("," ")).replace("!"," ")).replace("\\"," ")).replace("..", "  "))
+    cntd = ((((((cntd.replace("\\r"," ")).replace(":"," ")).replace("\\t","\t")).replace("\\n","\n")).replace("="," ")).replace(")"," "))
+    cntd = ((((((cntd.replace("("," ")).replace("!"," ")).replace("\\"," ")).replace("..", "  ")).replace("&quot", " ")).replace("|"," "))
     cntd = (((((((cntd.replace(">", " ")).replace("<"," ")).replace(";"," ")).replace(","," ")).lower()).replace("'"," ")).replace('"'," "))
     cntd = cntd.split()
     for blk in cntd:
