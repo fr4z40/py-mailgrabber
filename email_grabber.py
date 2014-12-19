@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # Eduardo Frazão
 # 2014/11/24
-# yeah, it's an ugly code, but it works
-
 from string import punctuation
 from google import search
 from sys import argv
@@ -59,7 +57,7 @@ else:
 mails = []
 
 # To long searchs, is better put a 'pause' to delay the search, or google will block you
-# Search(keys, stop=None, pause=0.0) => Put a float value;
+# Search(keys, stop=None, pause=0.0) => Put a float value, over 6 seconds;
 # A high value on the delay will cause the search to take more time, however, the chances
 # of being blocked by google, become smaller.
 # If you are blocked, solve the captcha or renew your IP address.
