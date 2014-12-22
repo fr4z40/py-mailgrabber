@@ -12,7 +12,7 @@ def writer(x,y):
         log.close()
 
 def repl(x):
-    for p in (" ".join(((((punctuation.replace('_', '')).replace('.', '')).replace('@', ''))).split())):
+    for p in (" ".join((((((punctuation.replace('-', '')).replace('_', '')).replace('.', '')).replace('@', ''))).split())):
         x = x.replace(p, ' ')
     return(x.strip())
 
