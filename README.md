@@ -1,12 +1,16 @@
-a "simple email grabber" in python
+# PyMail Grabber
+A "simple e-mail grabber" in Python 3 to execute in termnial
 
-you need google-1.06:
-	https://breakingcode.wordpress.com/2010/06/29/google-search-python/
 
-and beautifulsoup4:
-	sudo apt-get install python3-bs4
+##How to setup
+`pip install google`
 
-###########################################################################
 
-this script is just an example of what can be done with google lib,
-you can automate the use of "dorks" for example
+##How to use
+`python3 email_grabber.py output-file.txt "keys to search in google"`
+
+
+##Lib`s
+https://breakingcode.wordpress.com/2010/06/29/google-search-python/
+
+this script is just an example of what can be done with google lib, you can automate the use of "dorks" for example
