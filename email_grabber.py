@@ -1,68 +1,40 @@
 #!/usr/bin/env python3
-# Eduardo Frazão
-# 2014/11/24
-from string import punctuation
+# Author: Eduardo Frazão
+# Contributor: Jonatas Freitas
+# First commit date: 2014-11-24
+'''Main file
+'''
+
 from google import search
 from sys import argv
-import urllib.request
 
-def writer(x,y):
-    with open(x, 'a') as log:
-        log.write(('%s\n' % y))
-        log.close()
-
-def repl(x):
-    for p in (" ".join((((((punctuation.replace('-', '')).replace('_', '')).replace('.', '')).replace('@', ''))).split())):
-        x = x.replace(p, ' ')
-    return(x.strip())
-
-def filtr(x):
-    flt = (('''
-             xxxx xxx@ 12345 fulano seuemail usuario meuemail @xx seublog meudominio meunome blabla .. @@ seunome user.name mailto username mail@
-             user@ yourusername fake info@ ：
-            ''').split())
-    for n in flt:
-        if n in x:
-            cndc = False
-            break
-        else:
-            cndc = True
-    return(cndc)
-
-def chk(x):
-    try:
-        cntd = repl((str((urllib.request.urlopen(x)).read().decode('utf8'))).lower())
-        cntd = cntd.split()
-        for blk in cntd:
-            blk = ((blk.replace('\n','')).strip())
-            if (("@" in blk) and ("." in blk)) and ((blk not in mails) and ((len(blk[:(blk.find("@"))]) > 2) and (len(blk) < 40))):
-                if filtr(blk) == True:
-                    mails.append(blk)
-                    print("*\t%s" % blk)
-                    writer(file_name, blk)
-            else:
-                pass
-    except Exception as erro:
-        pass
+from modules.engine import Engine
 
 
-if len(argv) != 3:
-    print('\n\td_f.py file_name_output.ext "keys to find"\n\tor...\n\td_f.py file_name_output.ext %s\n' % (''' '"keys to find"' '''))
-    quit()
-else:
+if len(argv) == 3:
+
     file_name = argv[1]
     keys = argv[2]
 
+    print('\n %s \n %s \n %s \n %s \n %s\n\n' % (
+        '############################################################',
+        '##### Email Grabber Start ! #####',
+        'Output file: ' + file_name,
+        'Keys: ' + keys,
+        '############################################################'
+    ))
 
-mails = []
+    for url in search(keys, stop=None):
+        print("URL: %s" % url)
+        Engine.start(file_name, url)
 
-# To long searchs, is better put a 'pause' to delay the search, or google will block you
-# Search(keys, stop=None, pause=0.0) => Put a float value, over 6 seconds;
-# A high value on the delay will cause the search to take more time, however, the chances
-# of being blocked by google, become smaller.
-# If you are blocked, solve the captcha or renew your IP address.
+else:
+    print('\n %s \n %s \n %s \n\n %s \n %s\n\n' % (
+        '############################################################',
+        '##### HOW TO USE #####',
+        'python3 email_grabber.py output.txt "keys to search"',
+        'To long searchs, google will block you.',
+        '############################################################'
+    ))
 
-print("\noutput file: %s\nSearching Key(s): %s\n" % (argv[1], argv[2]))
-for url in search(keys, stop=None):
-    print("URL: %s" % url)
-    chk(url)
+    quit()
