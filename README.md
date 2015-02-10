@@ -1,5 +1,5 @@
 # PyMail Grabber
-A "simple e-mail grabber" in Python 3 to execute in termnial
+A "simple e-mail grabber" in Python 3 to execute in terminal
 
 
 ##How to setup
