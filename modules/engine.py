@@ -4,13 +4,9 @@
 # First commit date: 2014-11-24
 '''Engine Module
 '''
-
-
-import urllib.request
+from urllib.request import urlopen
 import re
-
 from modules.helpers import Helpers
-
 
 class Engine:
 
@@ -19,8 +15,7 @@ class Engine:
 
             mails = []
 
-            repl_data = str(
-                urllib.request.urlopen(url).read().decode('utf8')).lower()
+            repl_data = str(((urlopen(url)).read().decode('utf8')).lower())
 
             cntd = Helpers.repl(repl_data)
             cntd = cntd.split()
