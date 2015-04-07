@@ -4,15 +4,13 @@
 # First commit date: 2014-11-24
 '''Helpers module
 '''
-
 from string import punctuation
-
 
 class Helpers:
 
     def writer(x, y):
-        with open(x, 'a') as log:
-            log.write(('%s\n' % y))
+        with open(x, 'a', encoding='utf8') as log:
+            log.write(('%s\n' % y.strip()))
             log.close()
 
     def repl(x):
@@ -29,7 +27,7 @@ class Helpers:
 
     def filter(x):
         flt = (('''
-                 xxxx xxx@ 12345 fulano seuemail
+                 xxxx xxx@ 12345 fulano seuemail @mail @email
                  usuario meuemail @xx seublog meudominio
                  meunome blabla .. @@ seunome user.name
                  mailto username mail@
