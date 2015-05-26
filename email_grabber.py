@@ -68,7 +68,7 @@ def filterr(x):
 
 def length(x):
     eml = (x[:(x.find('@'))])
-    if ((len(eml) <= 30) and (len(eml) >= 6)):
+    if (((len(eml) <= 30) and (len(eml) >= 6)) and (len(x) <= 36)):
         rst = True
     else:
         rst = False
