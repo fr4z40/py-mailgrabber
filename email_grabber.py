@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-# Author: Eduardo Frazão ( http://github.com/fr4z40 )
+# Author: Eduardo Frazão
+#   * http://github.com/fr4z40
+#   * https://bitbucket.org/fr4z40
 # Created in: 24 Nov 2014
 
 from google import search
