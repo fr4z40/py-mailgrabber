@@ -30,7 +30,7 @@ class search_on_file(object):
                 line = (line.decode('iso-8859-1')).strip()
             line = line.strip()
             if (len(line) >= 11):
-                for r in mailextract(line):
+                for r in mailextract(line, filter_plus):
                     if (r != None):
                         self.log(output_file, r)
         file_in.close()
@@ -42,14 +42,14 @@ class search_on_file(object):
         walk = self.os.walk
 
         if (path.isfile(target_path) == True):
-            self.search(target_path, output_file, filter_plus=None)
+            self.search(target_path, output_file, filter_plus)
 
         elif (path.isdir(target_path) == True):
             try:
                 for dr in walk(target_path):
                     for fl in dr[2]:
                         pth = ('%s/%s' % (dr[0], fl)).replace('//','/')
-                        self.search(pth, output_file, filter_plus=None)
+                        self.search(pth, output_file, filter_plus)
             except:
                 pass
 
