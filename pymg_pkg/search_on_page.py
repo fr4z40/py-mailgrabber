@@ -29,10 +29,10 @@ class search_on_page(list):
 
 
 
-    def __init__(self, url, filter_plus):
+    def __init__(self, url, filter_plus=None):
         mailextract = self.mailextract
         source = self.source
-        for mail in mailextract(source(url), filter_plus=None):
+        for mail in mailextract(source(url), filter_plus):
             if ((mail != None) and (mail not in self)):
                 self.append(mail)
 
