@@ -1,0 +1,2 @@
+from pymg_pkg.search_on_file import search_on_file
+from pymg_pkg.search_on_page import search_on_page

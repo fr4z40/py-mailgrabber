@@ -1,19 +1,63 @@
-# py-mailgrabber
-A "simple e-mail grabber"
+## Instalation
+
+**********************************************************************
+
+- Install Requeriments
+
+ - for Python.2
+
+   `pip install -r requeriments.txt`
+
+ - for Python.3
+
+   `pip3 install -r requeriments.txt`
+
+<br/>
+
+- Rename the "main.py" to "mailgrabber" and move it with the pymg_pkg folder to "/usr/bin/"
+
+   Every time you need use it, just open your terminal and type "mailgrabber"
+
+<br/>
+
+- Or you can use a virtualenv, install the requirements and run the application
+
+<br/>
+
+**********************************************************************
+
+<br/>
+
+## Use
 
 
-##How to use
-`python3 email_grabber.py "keys to search in google" output-file.txt`
+- help
+ - Show This Help
 
- or
- 
-`python3 email_grabber.py -h` to see the "help"
+<br/>
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+- exit
+ - exit the software
 
-Screenshots:
+<br/>
 
-![print](https://cloud.githubusercontent.com/assets/6937186/7791635/fd6cb924-0279-11e5-9533-3774bdc267ef.png)
+- files
+ - Search in Files
+ - You can set a file to Search, or a folder to recursive search
 
+<br/>
 
-![screenshot from 2016-05-03 12 04 16](https://cloud.githubusercontent.com/assets/6937186/14987858/ae0fa91e-1127-11e6-849a-3e455629f2ef.png)
+- url
+ - Search in a single page
+
+<br/>
+
+- google
+ - Search using Google
+
+<br/>
+
+- add_filter
+ - set an external file as an adtional filter
+ - you can use a file with emails, to not repeat this emails
+
