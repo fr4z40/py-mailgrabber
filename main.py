@@ -58,13 +58,16 @@ def help_module():
 
 
 def add_filter():
-    global f_p
     f_p = None
     while (f_p==None):
         filter_file = input("* Set Here your adtional filter\n:")
         filter_file = ((str(filter_file)).strip()).strip("'")
         if path.isfile(filter_file):
-            f_p = filter_file
+            filter_in = open(filter_file, 'r')
+            cnt = (filter_in.read()).strip().split()
+            filter_in.close()
+            global f_p
+            f_p = cnt
             break
         else:
             print("It's not a file, please, try again\n")
@@ -192,9 +195,6 @@ def google_module():
 def main():
     call('reset')
 
-    global f_p
-    f_p=None
-
     options = {
         'help':help_module,
         'files':file_module,
@@ -224,6 +224,10 @@ def main():
 
 
 if __name__ == '__main__':
+
+    global f_p
+    f_p=None
+
     call('reset')
     out_f = None
     while (out_f==None):
