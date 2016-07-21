@@ -62,6 +62,7 @@ def add_filter():
     f_p = None
     while (f_p==None):
         filter_file = input("* Set Here your adtional filter\n:")
+        filter_file = ((str(filter_file)).strip()).strip("'")
         if path.isfile(filter_file):
             f_p = filter_file
             break
