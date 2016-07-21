@@ -33,28 +33,23 @@
 - help
  - Show This Help
 
-<br/>
 
 - exit
  - exit the software
 
-<br/>
 
 - files
  - Search in Files
  - You can set a file to Search, or a folder to recursive search
 
-<br/>
 
 - url
  - Search in a single page
 
-<br/>
 
 - google
  - Search using Google
 
-<br/>
 
 - add_filter
  - set an external file as an adtional filter
