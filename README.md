@@ -1,6 +1,5 @@
 ## Instalation
 
-**********************************************************************
 
 - Install Requeriments
 
@@ -61,3 +60,6 @@
  - set an external file as an adtional filter
  - you can use a file with emails, to not repeat this emails
 
+<br/>
+
+![Screenshot](https://raw.githubusercontent.com/fr4z40/py-mailgrabber/master/Screenshot%20from%202016-07-21%2013%3A06%3A45.jpeg)
