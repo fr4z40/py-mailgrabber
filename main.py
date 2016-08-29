@@ -14,6 +14,11 @@ from pymg_pkg import *
 from subprocess import call
 from os import path
 
+try:
+    import readline
+except:
+    pass
+
 
 how_to = '''
 #
